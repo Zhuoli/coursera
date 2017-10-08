@@ -18,7 +18,13 @@
 
 <template name="discussSite">
     <h3>Discussing: {{url}} </h3>
+    <div>
     {{> addCommentForm}}
+    {{#each comments _id}}
+      <p>{{text}}</p> 
+      <p>by {{createdBy}} on {{createdOn}}</p>
+    {{/each}}
+    </div>
 
     <!-- write some code here that iterates through the comments and displays
     the comment text and the author -->

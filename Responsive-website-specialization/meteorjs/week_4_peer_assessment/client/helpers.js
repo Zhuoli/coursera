@@ -14,3 +14,20 @@ Template.siteList.helpers({
         }
     }
 });
+
+Template.discussSite.helpers({
+
+'comments':function(siteId){
+    //return Comments.find();
+    console.log(siteId)
+    return Comments.find({siteId:siteId});
+    //return [{"text":"hello world zhuoli", "createdBy":"usera", "createdOn":new Date()}, 
+    //        {"text":"nihao", "createdBy":"userb", "createdOn":new Date()}]
+
+// complete the code here so that it reruns
+
+// all the comments with a siteId equal to siteId.
+
+},
+
+});
